@@ -1,0 +1,1 @@
+Piazza, Discussion 3 podcast, Lab 3-4, Prof Aaron lecrure slides 8-11, podcast class demos, and ChatGPT to explain how assert tests work in more detail and also to explain the use of <ctype.h>
