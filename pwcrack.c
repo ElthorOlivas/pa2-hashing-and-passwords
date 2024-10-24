@@ -68,7 +68,7 @@
         hexstr_to_hash(hash_as_hexstr, given_hash);
         assert(check_password("password", given_hash) == 1);
         assert(check_password("notpassword", given_hash) == 0);
-        printf("test_check_password passed.\n");
+      //  printf("test_check_password passed.\n");
 }
     void test_hex_to_byte() {
         assert(hex_to_byte('c', '8') == 200);
@@ -76,7 +76,7 @@
         assert(hex_to_byte('0', 'a') == 10);
         assert(hex_to_byte('1', '0') == 16);
         assert(hex_to_byte('f', 'f') == 255);
-        printf("test_hex_to_byte passed.\n");
+      //  printf("test_hex_to_byte passed.\n");
 }
     void test_hexstr_to_hash() {
         char hexstr[64] = "a2c3b02cb22af83d6d1ead1d4e18d916599be7c2ef2f017169327df1f7c844fd";
@@ -92,7 +92,7 @@
         assert(hash[1] == 0xc3);
         assert(hash[30] == 0x4f);
         assert(hash[31] == 0xfd);
-        printf("test_hexstr_to_hash passed.\n");
+     //   printf("test_hexstr_to_hash passed.\n");
 }
     void test_crack_password() {
         char hash_as_hexstr[] = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"; 
@@ -103,7 +103,7 @@
         assert(password[2] == 's'); 
         char wrong_password[] = "wrongpass";
         assert(crack_password(wrong_password, given_hash) == 0);
-        printf("test_crack_password passed.\n");
+       // printf("test_crack_password passed.\n"); 
 }
     int main(int argc, char** argv){
         const int testing = 1;
