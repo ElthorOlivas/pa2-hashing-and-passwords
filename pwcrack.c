@@ -106,7 +106,7 @@
        // printf("test_crack_password passed.\n"); 
 }
     int main(int argc, char** argv){
-        const int testing = 1;
+        const int testing = 0;
     if (testing) {
         test_check_password();
         test_crack_password();
