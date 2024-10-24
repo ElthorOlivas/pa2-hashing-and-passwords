@@ -19,7 +19,7 @@
        else {
         return 0;
        }
-       if(h2>='0' && h2<='9'){ //second cahr
+       if(h2>='0' && h2<='9'){ //second cahrnn
         value2 = h2 - '0';
        }
        else if(h2>='a' && h2<='f'){
