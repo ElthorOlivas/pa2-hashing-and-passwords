@@ -107,30 +107,30 @@
 }
     int main(int argc, char** argv){
         const int testing = 1;
-        if (testing) {
-            test_check_password();
-            test_crack_password();
-        }
-        if(argc != 2){
-            printf("Usage: %s <64-character-hex-string>\n", argv[0]);
-            return 1;
-        }
-        unsigned char given_hash[32];
-        hexstr_to_hash(argv[1], given_hash);
-        char password[256]; 
-        int found = 0;
-        while (fgets(password, sizeof(password), stdin)) {
+    if (testing) {
+        test_check_password();
+        test_crack_password();
+    }
+    if(argc != 2){
+        printf("Usage: %s <64-character-hex-string>\n", argv[0]);
+        return 1;
+    }
+    unsigned char given_hash[32];
+    hexstr_to_hash(argv[1], given_hash);
+    char password[256]; 
+    int found = 0;
+    while (fgets(password, sizeof(password), stdin)) {
         password[strcspn(password, "\n")] = '\0';
-        if (check_password(password, given_hash)) {
+        if (crack_password(password, given_hash)) {
             printf("Found password: SHA256(%s) = %s\n", password, argv[1]);
             found = 1;
             break;
         }
     }
-        if (!found) {
-            printf("Did not find a matching password\n");
+    if (!found) {
+        printf("Did not find a matching password\n");
     }
-        return 0;
+    return 0;
 }
     
     
